@@ -8,6 +8,12 @@ public class Photographer {
     this.collection = new ArrayList<Camera>();
   }
 
+  public int collectionCount(){
+    return collection.size();
+  }
 
+  public void addToCollection(Camera camera) {
+    collection.add(camera);
+  }
 
 }
