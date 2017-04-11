@@ -12,6 +12,11 @@ public class PhotographerTest {
   }
 
   @Test
+  public void collectionStartsEmpty(){
+    assertEquals(0, photographer.collectionCount());
+  }
+
+  @Test
   public void canAddCamera(){
     photographer.addCamera(camera);
     assertEquals(1, photographer.collectionCount());

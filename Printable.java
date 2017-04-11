@@ -1,5 +1,5 @@
 public interface Printable {
 
-  String printDetails();
-  
+  String cameraDetails();
+
 }
