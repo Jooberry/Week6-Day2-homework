@@ -22,8 +22,8 @@ public class Photographer {
 
   public String printOutAllCameraDetails() {
     String list = "";
-    for(Printable printable : this.collection)
-      list += printable.cameraDetails();
+    for(Printable printable : this.collection){
+      list += printable.cameraDetails() + "|";
     }
     return list;
   }

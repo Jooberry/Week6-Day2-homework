@@ -1,17 +1,14 @@
-public class DigitalCamera implements Printable{
-  
-  String name;
-  String feature1;
-  String feature2;
+public class DigitalCamera extends Camera implements Printable{
 
-  public DigitalCamera(String name, String feature1, String feature2){
-    this.name = name;
-    this.feature1 = feature1;
-    this.feature2 = feature2;
+  String operatingSystem;
+
+  public DigitalCamera(String name, String feature1, String feature2, String operatingSystem){
+    super(name, feature1, feature2);
+    this.operatingSystem = operatingSystem;
   }
 
   public String cameraDetails() {
-    return name + feature1 + feature2;
+    return "Name: " + name + ", " +  "Features: " + feature1 + ", " + feature2 + ", " + "Operating system: " + operatingSystem;  
   }
   
 }

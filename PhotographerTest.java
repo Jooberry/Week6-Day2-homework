@@ -10,8 +10,8 @@ public class PhotographerTest {
   @Before
   public void before(){
     photographer = new Photographer();
-    analogCamera = new AnalogCamera("Sony ILCE5100L", "No noise reduction", "Lo-resolution");
-    digitalCamera = new DigitalCamera("Nikon 34T", "Noise Reduction Filter", "Hi-resolution");
+    analogCamera = new AnalogCamera("Nikon 34T", "Noise reduction filter", "Hi-resolution", "AnalogShake");
+    digitalCamera = new DigitalCamera("Sony ILCE5100L", "No Noise Reduction", "Lo-resolution", "Android");
   }
 
   @Test
@@ -34,7 +34,9 @@ public class PhotographerTest {
 
   @Test
   public void printOutAllCameraDetails(){
-    
+    photographer.addCamera(analogCamera);
+    photographer.addCamera(digitalCamera);
+    assertEquals( "Name: Nikon 34T, Features: Noise reduction filter, Hi-resolution, AnalogShake|Name: Sony ILCE5100L, Features: No Noise Reduction, Lo-resolution, Operating system: Android|", photographer.printOutAllCameraDetails());
   }
 
 }
