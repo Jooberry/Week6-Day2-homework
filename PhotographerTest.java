@@ -39,4 +39,15 @@ public class PhotographerTest {
     assertEquals( "Name: Nikon 34T, Features: Noise reduction filter, Hi-resolution, AnalogShake|Name: Sony ILCE5100L, Features: No Noise Reduction, Lo-resolution, Operating system: Android|", photographer.printOutAllCameraDetails());
   }
 
+  @Test
+  public void journalStartsEmpty(){
+    assertEquals(0, photographer.journalCount());
+  }
+
+  @Test
+  public void canAddPhoto(){
+    photographer.addPhoto("24/4/2017", 5);
+    assertEquals(1, photographer.journalCount());
+  }
+
 }
