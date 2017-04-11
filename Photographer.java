@@ -12,8 +12,12 @@ public class Photographer {
     return collection.size();
   }
 
-  public void addToCollection(Camera camera) {
+  public void addCamera(Camera camera) {
     collection.add(camera);
+  }
+
+  public void removeCamera(Camera camera) {
+    collection.remove(0);
   }
 
 }
