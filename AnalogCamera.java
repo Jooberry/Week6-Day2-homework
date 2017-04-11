@@ -1,7 +1,17 @@
-public class AnalogCamera {
+public class AnalogCamera implements Printable{
   
+  String name;
+  String feature1;
+  String feature2;
+
+  public AnalogCamera(String name, String feature1, String feature2){
+    this.name = name;
+    this.feature1 = feature1;
+    this.feature2 = feature2;
+  }
+
   public String cameraDetails() {
-    return "Nikon 34T, Noise reduction filter, Hi-resolution";
+    return name + feature1 + feature2;  
   }
   
 }
