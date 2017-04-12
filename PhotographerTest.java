@@ -3,8 +3,8 @@ import org.junit.*;
 
 public class PhotographerTest {
   Photographer photographer;
-  AnalogCamera analogCamera;
-  DigitalCamera digitalCamera;
+  Printable analogCamera;
+  Printable digitalCamera;
   Printable printable;
 
   @Before
@@ -47,7 +47,7 @@ public class PhotographerTest {
   @Test
   public void canAddPhoto(){
     photographer.addPhoto("24/4/2017", 5);
-    assertEquals(1, photographer.journalCount());
+    assertEquals(5, photographer.photoCount("24/4/2017"));
   }
 
 }

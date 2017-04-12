@@ -39,4 +39,8 @@ public class Photographer {
     journal.put(date, photo);
   }
 
+  public int photoCount(String date) {
+    return journal.get(date);
+  }
+
 }
